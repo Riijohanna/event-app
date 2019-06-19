@@ -16,7 +16,7 @@ const Home = () => {
 
 useEffect(() => {
   if (loading) {
-    fetch('http://localhost:3030/api/events/')
+    fetch('http://localhost:3030/api/events/?limit=200')
     .then(res => res.json())
     .then((myData) => {
       setLoading(false);
